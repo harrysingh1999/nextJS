@@ -1,13 +1,15 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
+
+export const metadata = {
+  title: "Dynamic Route",
+  description: "New description",
+};
 
 export default function Products() {
   return (
     <div>
-        <h1>Men's Fashion Products</h1>
-        {/* <Link href='/products/menshirt'>
-           Go to Men's Category
-        </Link> */}
+      <h1>Men's Fashion Products</h1>
     </div>
-  )
+  );
 }

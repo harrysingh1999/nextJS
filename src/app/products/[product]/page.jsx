@@ -1,5 +1,7 @@
-import React from "react";
-
-export default function product({ params }) {
-  return <div>product </div>;
+export default function product() {
+  return (
+    <>
+      <h1>Product</h1>
+    </>
+  );
 }
