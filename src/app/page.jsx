@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 
+
 export default function Home() {
   const router = useRouter();
-  console.log(router);
 
   const handleRoute = (route) => {
     router.push(route);
@@ -18,6 +18,9 @@ export default function Home() {
         This is the HomePage
       </h1>
 
+      <h2 className="font-bold text-2xl mb-4">
+        Navigation in Client based Components
+      </h2>
       <div className="flex flex-col items-center mb-4">
         <h2 className="font-bold">
           1st Method of Navigating to Pages or Components via Link Component
@@ -33,9 +36,15 @@ export default function Home() {
 
         <a onClick={() => handleRoute("/products")}>Go to Produts Page</a>
         <a onClick={() => handleRoute("/products/product")}>
-        Go to Dynamic Products Page
+          Go to Dynamic Products Page
         </a>
       </div>
+
+      <h2 className="font-bold text-2xl mb-4">
+        Navigation in Server based Components
+      </h2>
+      <a onClick={() => handleRoute('/serverRouting')}>Go to Server Routing </a>
+      <p className="font-semibold">This will route you to Server Routing Component, but you will immediately be redirected to Products Page, Because server component routing is setup accordingly</p>
     </div>
   );
 }
